@@ -56,7 +56,7 @@ var CAST_API_INITIALIZATION_DELAY = 1000;
   }
 
   function loadMedia(){
-    var mediaInfo = new chrome.cast.media.MediaInfo("http://sjc-uhls-proxy.ustream.tv/watch/playlist.m3u8?cid="+cid);
+    var mediaInfo = new chrome.cast.media.MediaInfo("http://www.corsproxy.com/iphone-streaming.ustream.tv/uhls/"+cid+"/streams/live/iphone/playlist.m3u8");
       mediaInfo.metadata = new chrome.cast.media.GenericMediaMetadata();
       mediaInfo.metadata.metadataType = chrome.cast.media.MetadataType.GENERIC;
       mediaInfo.contentType = 'application/vnd.apple.mpegurl';
