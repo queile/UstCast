@@ -1,0 +1,12 @@
+{
+  "name": "UstCast",
+  "manifest_version": 2,
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://www.ustream.tv/channel/*"],
+      "js": ["main.js"]
+    }
+  ],
+  "web_accessible_resources": ["ustcast.js"]
+}
