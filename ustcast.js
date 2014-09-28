@@ -57,9 +57,8 @@ var CAST_API_INITIALIZATION_DELAY = 1000;
 
   function loadMedia(){
     var mediaInfo = new chrome.cast.media.MediaInfo("http://www.corsproxy.com/iphone-streaming.ustream.tv/uhls/"+cid+"/streams/live/iphone/playlist.m3u8");
-      mediaInfo.metadata = new chrome.cast.media.GenericMediaMetadata();
-      mediaInfo.metadata.metadataType = chrome.cast.media.MetadataType.GENERIC;
-      mediaInfo.contentType = 'application/vnd.apple.mpegurl';
+      mediaInfo.contentType = 'application/x-mpegurl';
+      mediaInfo.streamType = chrome.cast.media.StreamType.LIVE;
       var request = new chrome.cast.media.LoadRequest(mediaInfo);
       session.loadMedia(request,
         onMediaDiscovered.bind(this, 'loadMedia'),
